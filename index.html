@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="flaticon.css" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <input type="text" readonly id="pickerInput" data-title="Tiempo de compra" placeholder="Tiempo de compra">
+    <div id="ModalPicker">
+        <div id="contentPicker">
+            <h3 id="TitlePicker"></h3>
+            <div id="picker">
+                <div id="headPicker">
+                    <div>
+                        <button id="backMonth"><span class="flaticon-espalda"></span></button>
+                    </div>
+                    <div>
+                        <input type="button" id="year" value="2019">
+                        <input type="button" id="month" value="Marzo">
+                    </div>
+                    <div>
+                        <button id="nextMonth"><span class="flaticon-flecha-derecha"></span></button>
+                    </div>
+                </div>
+                <div id="bodyPicker">
+                    <table id="tableMonth">
+                    </table>
+                </div>
+                <div id="monthSelect">
+                </div>
+            </div>
+            <div id="pickerTime">
+                <div>
+                    <span id="hour_detail">12</span>:<span id="minute_detail">00</span><span id="tm"> AM</span>
+                </div>
+                <div>
+                    <input type="range" value="0" id="hours" min="0" max="23">
+                    <input type="range" id="minutes" min="0" max="59" value="0">
+                </div>
+            </div>
+            <div id="OK">
+                <input id="OK_btn" type="button" value="OK">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            startDateTimePicker("pickerInput")
+        }
+    </script>
+</body>
+
+</html>
